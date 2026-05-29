@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.26.0/dist/tabler-icons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
     <link rel="stylesheet" href="./dist/output.css" />
+    <style>
+      .rate-bar { height:4px; background:#e5e7eb; border-radius:99px; overflow:hidden; min-width:80px; }
+      .rate-bar-fill { height:100%; background:#3b82f6; border-radius:99px; }
+    </style>
   </head>
 
   <body class="flex h-screen overflow-hidden bg-agm-bg text-3.5 text-semantic-text-main">
@@ -29,20 +33,20 @@
         </svg>
       </div>
       <nav class="flex-1 overflow-y-auto overflow-x-hidden py-1.5 scrollbar-thin" aria-label="사이드바 메뉴">
-        <a class="nav-item" href="./dashboard.html"><i class="ti ti-layout-dashboard text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>대시보드</a>
-        <a class="nav-item" href="#"><i class="ti ti-users text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>주주명부 관리</a>
-        <a class="nav-item" href="#"><i class="ti ti-file-description text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>정관 관리</a>
-        <div class="h-px bg-semantic-border-default my-2.5" role="separator" aria-hidden="true"></div>
-        <div class="px-4.5 pt-[18px] pb-[5px] text-2.5 font-bold text-agm-text-dis uppercase tracking-[.06em] whitespace-nowrap" aria-hidden="true">주주총회</div>
+        <a class="nav-item" href="./dashboard.html"><i class="ti ti-layout-dashboard text-[15px] w-4 flex-shrink-0 text-center"></i>대시보드</a>
+        <a class="nav-item" href="#"><i class="ti ti-users text-[15px] w-4 flex-shrink-0 text-center"></i>주주명부 관리</a>
+        <a class="nav-item" href="#"><i class="ti ti-file-description text-[15px] w-4 flex-shrink-0 text-center"></i>정관 관리</a>
+        <div class="h-px bg-semantic-border-default my-2.5"></div>
+        <div class="px-4.5 pt-[18px] pb-[5px] text-2.5 font-bold text-agm-text-dis uppercase tracking-[.06em] whitespace-nowrap">주주총회</div>
         <div class="ig" id="ig-67">
           <button class="ig-hd" data-ig-toggle aria-expanded="true" aria-controls="ig-67-body">
-            <span class="w-[7px] h-[7px] rounded-full bg-agm-yellow flex-shrink-0" aria-label="준비중"></span>
-            <i class="ti ti-calendar-event text-[12px] text-agm-text-dis mr-px" aria-hidden="true"></i>
-            제67기 정기주총<i class="ti ti-chevron-down ig-chev" aria-hidden="true"></i>
+            <span class="w-[7px] h-[7px] rounded-full bg-agm-yellow flex-shrink-0"></span>
+            <i class="ti ti-calendar-event text-[12px] text-agm-text-dis mr-px"></i>
+            제67기 정기주총<i class="ti ti-chevron-down ig-chev"></i>
           </button>
           <div id="ig-67-body" class="ig-body" data-open="true">
             <a class="ig-link" href="./settings.html">기본설정<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
-            <a class="ig-link" href="./agenda.html">의안설정<span class="flex items-center gap-0.5 text-[10px] text-agm-yellow-tx font-semibold"><i class="ti ti-alert-triangle text-[10px]" aria-hidden="true"></i>2</span></a>
+            <a class="ig-link" href="./agenda.html">의안설정<span class="flex items-center gap-0.5 text-[10px] text-agm-yellow-tx font-semibold"><i class="ti ti-alert-triangle text-[10px]"></i>2</span></a>
             <a class="ig-link active" href="./prevote.html" aria-current="page">사전투표/위임<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str"></span></span></a>
             <a class="ig-link" href="./live.html">현장진행<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str"></span></span></a>
             <a class="ig-link" href="./result.html">결과보고<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str"></span></span></a>
@@ -50,9 +54,9 @@
         </div>
         <div class="ig" id="ig-66">
           <button class="ig-hd" data-ig-toggle aria-expanded="false" aria-controls="ig-66-body">
-            <span class="w-[7px] h-[7px] rounded-full bg-agm-text-dis flex-shrink-0" aria-label="완료"></span>
-            <i class="ti ti-calendar-event text-[12px] text-agm-text-dis mr-px" aria-hidden="true"></i>
-            제66기 정기주총<i class="ti ti-chevron-down ig-chev" aria-hidden="true"></i>
+            <span class="w-[7px] h-[7px] rounded-full bg-agm-text-dis flex-shrink-0"></span>
+            <i class="ti ti-calendar-event text-[12px] text-agm-text-dis mr-px"></i>
+            제66기 정기주총<i class="ti ti-chevron-down ig-chev"></i>
           </button>
           <div id="ig-66-body" class="ig-body" data-open="false">
             <a class="ig-link" href="./settings.html">기본설정<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
@@ -62,9 +66,9 @@
             <a class="ig-link" href="./result.html">결과보고<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
           </div>
         </div>
-        <div class="h-px bg-semantic-border-default my-2.5" role="separator" aria-hidden="true"></div>
-        <a class="nav-item" href="#"><i class="ti ti-template text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>템플릿</a>
-        <a class="nav-item" href="#"><i class="ti ti-clipboard-list text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>감사보고 관리</a>
+        <div class="h-px bg-semantic-border-default my-2.5"></div>
+        <a class="nav-item" href="#"><i class="ti ti-template text-[15px] w-4 flex-shrink-0 text-center"></i>템플릿</a>
+        <a class="nav-item" href="#"><i class="ti ti-clipboard-list text-[15px] w-4 flex-shrink-0 text-center"></i>감사보고 관리</a>
       </nav>
       <footer class="border-t border-semantic-border-default pt-1.5 pb-1.5 flex-shrink-0">
         <div class="flex items-center gap-[9px] px-4.5 py-2.5 cursor-pointer hover:bg-black/5 transition-colors duration-[120ms]">
@@ -77,145 +81,429 @@
     <!-- MAIN -->
     <main id="main-content" class="flex-1 min-w-0 flex flex-col overflow-hidden bg-white">
       <div id="page-wrap" class="flex-1 overflow-y-auto px-11 py-9 scrollbar-thin">
-        <!-- 페이지 헤더 -->
+
+        <!-- 헤더 -->
         <header class="flex items-center justify-between mb-6">
           <div class="flex items-baseline gap-2.5 flex-wrap">
             <span class="text-[22px] font-medium text-semantic-text-main tracking-tight">제67기 정기주총</span>
-            <span class="text-[22px] font-normal text-agm-text-dis" aria-hidden="true">/</span>
+            <span class="text-[22px] font-normal text-agm-text-dis">/</span>
             <h1 class="text-[22px] font-bold text-semantic-text-main tracking-tight">사전투표 / 위임</h1>
           </div>
-          <div class="flex gap-2 items-center" role="group" aria-label="페이지 액션">
-            <button class="btn btn-line btn-sm">
-              <i class="ti ti-download" aria-hidden="true"></i>데이터 내보내기
-            </button>
-            <button class="btn btn-line btn-sm">
-              <i class="ti ti-refresh" aria-hidden="true"></i>새로고침
-            </button>
+          <div class="flex gap-2 items-center">
+            <button class="btn btn-line btn-sm"><i class="ti ti-download"></i>내보내기</button>
+            <button class="btn btn-line btn-sm"><i class="ti ti-refresh"></i>새로고침</button>
           </div>
         </header>
 
-        <!-- 요약 카드 -->
-        <div class="mb-6 grid gap-3" style="grid-template-columns:repeat(4,1fr)">
-        <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
-          <p class="text-3 text-agm-text-sub mb-1">총 주주수</p>
-          <p class="text-8.5 font-bold text-semantic-text-main">1,247</p>
-          <p class="text-3 text-agm-text-dis mt-0.5">명</p>
+        <!-- 관리기관 정보 배너 -->
+        <div class="mb-6 flex items-center gap-4 px-4 py-2.5 rounded-lg bg-agm-blue-bg border border-agm-blue-bd">
+          <div class="flex items-center gap-1.5 text-3.5 text-blue-700">
+            <i class="ti ti-building-bank text-[14px]"></i>
+            <span class="font-semibold">전자투표 관리기관</span>
+            <span class="font-bold">IR큐더스</span>
+          </div>
+          <div class="w-px h-4 bg-agm-blue-bd"></div>
+          <div class="flex items-center gap-1.5 text-3.5 text-blue-700">
+            <i class="ti ti-calendar-time text-[14px]"></i>
+            <span class="font-semibold">행사기간</span>
+            <span>2025.03.14 ~ 2025.03.27</span>
+          </div>
+          <div class="w-px h-4 bg-agm-blue-bd"></div>
+          <div class="flex items-center gap-1.5 text-3.5 text-blue-700">
+            <i class="ti ti-calendar-time text-[14px]"></i>
+            <span class="font-semibold">위임장 행사기간</span>
+            <span>2025.03.14 ~ 2025.03.27</span>
+          </div>
         </div>
-        <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
-          <p class="text-3 text-agm-text-sub mb-1">전자투표 참여</p>
-          <p class="text-8.5 font-bold text-blue-600">384</p>
-          <p class="text-3 text-agm-text-dis mt-0.5">명 · <span class="text-blue-600 font-medium">30.8%</span></p>
-        </div>
-        <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
-          <p class="text-3 text-agm-text-sub mb-1">위임장 제출</p>
-          <p class="text-8.5 font-bold text-semantic-state-success">156</p>
-          <p class="text-3 text-agm-text-dis mt-0.5">명 · <span class="text-semantic-state-success font-medium">12.5%</span></p>
-        </div>
-        <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
-          <p class="text-3 text-agm-text-sub mb-1">사전 의결권 행사율</p>
-          <p class="text-8.5 font-bold text-semantic-text-main">43.3%</p>
-          <p class="text-3 text-agm-text-dis mt-0.5">408,000주 중 176,544주</p>
-        </div>
-      </div>
 
-      <!-- 탭 -->
-      <div class="flex-shrink-0">
-        <div role="tablist" class="flex border-b border-semantic-border-default">
-          <button role="tab" aria-selected="true" aria-controls="tab-panel-evote"
-            class="py-2 mr-[22px] text-4 text-semantic-text-main font-semibold border-b-2 border-semantic-text-main -mb-px transition-colors whitespace-nowrap cursor-pointer">
-            전자투표 <span class="ml-1 text-3 font-normal text-agm-text-dis">(384)</span>
-          </button>
-          <button role="tab" aria-selected="false" aria-controls="tab-panel-proxy"
-            class="py-2 mr-[22px] text-4 text-semantic-text-tertiary border-b-2 border-transparent -mb-px transition-colors whitespace-nowrap cursor-pointer hover:text-agm-text-sub">
-            위임장 <span class="ml-1 text-3 font-normal text-agm-text-dis">(156)</span>
-          </button>
-          <button role="tab" aria-selected="false" aria-controls="tab-panel-none"
-            class="py-2 mr-[22px] text-4 text-semantic-text-tertiary border-b-2 border-transparent -mb-px transition-colors whitespace-nowrap cursor-pointer hover:text-agm-text-sub">
-            미참여 <span class="ml-1 text-3 font-normal text-agm-text-dis">(707)</span>
-          </button>
-        </div>
-      </div>
+        <div class="pb-9 flex flex-col gap-6">
 
-        <!-- 탭 패널 -->
-        <div>
-          <!-- 전자투표 패널 -->
-          <section id="tab-panel-evote" role="tabpanel" class="py-4">
-          <table class="w-full border-collapse table-fixed bg-white rounded-lg shadow-sm border border-semantic-border-default overflow-hidden" aria-label="전자투표 현황">
-            <thead>
-              <tr class="bg-semantic-surface-subtle border-b border-semantic-border-default">
-                <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[200px]">주주명</th>
-                <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[120px]">보유 주식수</th>
-                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제1호</th>
-                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제2호</th>
-                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제3호</th>
-                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제4호</th>
-                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[120px]">참여일시</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
-                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">김** (개인)</td>
-                <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">12,500</td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-warn">반대</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/15 14:22</td>
-              </tr>
-              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
-                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">이** 자산운용</td>
-                <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">45,200</td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-warn">반대</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/16 09:47</td>
-              </tr>
-              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
-                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">박** (개인)</td>
-                <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">3,000</td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-warn">반대</span></td>
-                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/20 16:05</td>
-              </tr>
-              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
-                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">최** 펀드</td>
-                <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">82,000</td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/22 11:30</td>
-              </tr>
-              <tr class="hover:bg-semantic-surface-subtle">
-                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">정** (개인)</td>
-                <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">7,800</td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-warn">반대</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
-                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/25 08:14</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="text-3 text-agm-text-dis text-center mt-4">379개 더 있습니다</p>
-        </section>
+          <!-- 통계 카드 Row 1: 주요 현황 -->
+          <div class="grid grid-cols-4 gap-3">
+            <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
+              <p class="text-3 text-agm-text-sub mb-1">총 주주수</p>
+              <p class="text-8.5 font-bold text-semantic-text-main">1,247</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">명</p>
+            </div>
+            <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
+              <p class="text-3 text-agm-text-sub mb-1">전자투표 참여</p>
+              <p class="text-8.5 font-bold text-blue-600">384</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">명 · <span class="text-blue-600 font-medium">30.8%</span></p>
+            </div>
+            <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
+              <p class="text-3 text-agm-text-sub mb-1">위임장 제출</p>
+              <p class="text-8.5 font-bold text-semantic-state-success">156</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">명 · <span class="text-semantic-state-success font-medium">12.5%</span></p>
+            </div>
+            <div class="bg-white rounded-lg border border-semantic-border-default px-4 py-3 shadow-sm">
+              <p class="text-3 text-agm-text-sub mb-1">사전 의결권 행사율</p>
+              <p class="text-8.5 font-bold text-semantic-text-main">43.3%</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">408,000주 중 176,544주</p>
+            </div>
+          </div>
 
-        <!-- 위임장 패널 -->
-          <section id="tab-panel-proxy" role="tabpanel" class="hidden py-4">
-          <p class="text-3.5 text-agm-text-dis">위임장 제출 데이터가 여기에 표시됩니다.</p>
-        </section>
+          <!-- 통계 카드 Row 2: 중복 분석 -->
+          <div class="grid grid-cols-4 gap-3">
+            <div class="bg-white rounded-lg border border-agm-yellow-bd px-4 py-3 shadow-sm">
+              <div class="flex items-center gap-1 mb-1">
+                <i class="ti ti-alert-triangle text-agm-yellow text-[11px]"></i>
+                <p class="text-3 text-agm-yellow-tx">중복 주주수</p>
+              </div>
+              <p class="text-8.5 font-bold text-agm-yellow-tx">12</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">명 (중복 제출)</p>
+            </div>
+            <div class="bg-white rounded-lg border border-agm-yellow-bd px-4 py-3 shadow-sm">
+              <div class="flex items-center gap-1 mb-1">
+                <i class="ti ti-alert-triangle text-agm-yellow text-[11px]"></i>
+                <p class="text-3 text-agm-yellow-tx">중복 주식수</p>
+              </div>
+              <p class="text-8.5 font-bold text-agm-yellow-tx">15,200</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">주 (제외 대상)</p>
+            </div>
+            <div class="bg-white rounded-lg border border-agm-green-bd px-4 py-3 shadow-sm">
+              <div class="flex items-center gap-1 mb-1">
+                <i class="ti ti-check text-semantic-state-success text-[11px]"></i>
+                <p class="text-3 text-semantic-state-success">중복 제외 주주수</p>
+              </div>
+              <p class="text-8.5 font-bold text-semantic-state-success">528</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">명 (유효)</p>
+            </div>
+            <div class="bg-white rounded-lg border border-agm-green-bd px-4 py-3 shadow-sm">
+              <div class="flex items-center gap-1 mb-1">
+                <i class="ti ti-check text-semantic-state-success text-[11px]"></i>
+                <p class="text-3 text-semantic-state-success">중복 제외 주식수</p>
+              </div>
+              <p class="text-8.5 font-bold text-semantic-state-success">161,344</p>
+              <p class="text-3 text-agm-text-dis mt-0.5">주 (유효)</p>
+            </div>
+          </div>
 
-        <!-- 미참여 패널 -->
-          <section id="tab-panel-none" role="tabpanel" class="hidden py-4">
-          <p class="text-3.5 text-agm-text-dis">미참여 주주 목록이 여기에 표시됩니다.</p>
-        </section>
+          <!-- 원본 데이터 업로드 -->
+          <section class="bg-white rounded-[10px] border border-semantic-border-default shadow-sm overflow-hidden">
+            <div class="flex items-center gap-2 px-5 py-3.5 border-b border-semantic-border-default">
+              <i class="ti ti-file-spreadsheet text-[15px] text-agm-text-sub"></i>
+              <h2 class="text-3.5 font-semibold text-semantic-text-main">원본 데이터 업로드</h2>
+              <span class="text-3 text-agm-text-dis">전자투표 및 위임내역 원본 파일 등록</span>
+            </div>
+            <div class="px-5 py-4 grid grid-cols-2 gap-4">
+              <!-- 전자투표 업로드 -->
+              <div>
+                <p class="text-3 font-semibold text-agm-text-sub mb-2">전자투표 내역</p>
+                <div class="border border-semantic-border-default rounded-lg p-3 flex items-center gap-3 bg-agm-blue-bg mb-2">
+                  <i class="ti ti-file-spreadsheet text-blue-600 text-[16px]"></i>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-3.5 font-medium text-semantic-text-main truncate">전자투표내역_IR큐더스_20250325.xlsx</p>
+                    <p class="text-3 text-agm-text-dis">384건 · 2025.03.25 업로드</p>
+                  </div>
+                  <button class="text-agm-text-dis hover:text-red-500 transition-colors flex-shrink-0" aria-label="삭제">
+                    <i class="ti ti-x"></i>
+                  </button>
+                </div>
+                <div class="border-2 border-dashed border-agm-bd-str rounded-lg px-4 py-3 text-center cursor-pointer hover:border-blue-600 hover:bg-agm-blue-bg transition-colors" role="button" tabindex="0">
+                  <p class="text-3.5 text-agm-text-dis"><strong class="text-blue-600">파일 선택</strong> 또는 드래그</p>
+                  <p class="text-3 text-agm-text-dis mt-0.5">xlsx · xls</p>
+                </div>
+              </div>
+              <!-- 전자위임 업로드 -->
+              <div>
+                <p class="text-3 font-semibold text-agm-text-sub mb-2">전자위임 내역</p>
+                <div class="border-2 border-dashed border-agm-bd-str rounded-lg px-4 py-[26px] text-center cursor-pointer hover:border-blue-600 hover:bg-agm-blue-bg transition-colors" role="button" tabindex="0">
+                  <i class="ti ti-upload text-[20px] text-agm-text-dis block mb-1"></i>
+                  <p class="text-3.5 text-agm-text-dis"><strong class="text-blue-600">파일 선택</strong> 또는 드래그</p>
+                  <p class="text-3 text-agm-text-dis mt-0.5">xlsx · xls</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 안건별 사전의결권 행사 현황 -->
+          <section class="bg-white rounded-[10px] border border-semantic-border-default shadow-sm overflow-hidden">
+            <div class="flex items-center gap-2 px-5 py-3.5 border-b border-semantic-border-default">
+              <i class="ti ti-chart-bar text-[15px] text-agm-text-sub"></i>
+              <h2 class="text-3.5 font-semibold text-semantic-text-main">안건별 사전의결권 행사 현황</h2>
+              <span class="text-3 text-agm-text-dis">클릭하면 주주별 상세 내역을 확인합니다</span>
+            </div>
+            <table class="w-full border-collapse" aria-label="안건별 행사 현황">
+              <thead>
+                <tr class="bg-semantic-surface-subtle border-b border-semantic-border-default">
+                  <th class="text-left text-3 font-semibold text-agm-text-sub px-5 py-2.5 w-[90px]">안건</th>
+                  <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5">의안명</th>
+                  <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[150px]">총 행사가능 의결권</th>
+                  <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[110px]">행사 주주수</th>
+                  <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[160px]">행사율</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-semantic-border-default hover:bg-agm-blue-bg cursor-pointer transition-colors" onclick="openDetailModal('제1호', '재무제표 승인의 건')">
+                  <td class="px-5 py-3 text-3.75 font-bold text-agm-text-sub">제1호</td>
+                  <td class="px-4 py-3 text-3.5 text-semantic-text-main">재무제표 승인의 건</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main font-medium">176,544 주</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main">540 명</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <div class="rate-bar flex-1"><div class="rate-bar-fill" style="width:43.3%"></div></div>
+                      <span class="text-3.5 font-semibold text-blue-600 w-[42px] text-right">43.3%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-b border-semantic-border-default hover:bg-agm-blue-bg cursor-pointer transition-colors" onclick="openDetailModal('제2호', '이사 선임의 건')">
+                  <td class="px-5 py-3 text-3.75 font-bold text-agm-text-sub">제2호</td>
+                  <td class="px-4 py-3 text-3.5 text-semantic-text-main">이사 선임의 건</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main font-medium">176,544 주</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main">488 명</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <div class="rate-bar flex-1"><div class="rate-bar-fill" style="width:43.3%"></div></div>
+                      <span class="text-3.5 font-semibold text-blue-600 w-[42px] text-right">43.3%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-b border-semantic-border-default hover:bg-agm-blue-bg cursor-pointer transition-colors" onclick="openDetailModal('제3호', '감사 선임의 건')">
+                  <td class="px-5 py-3 text-3.75 font-bold text-agm-text-sub">제3호</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <span class="text-3.5 text-semantic-text-main">감사 선임의 건</span>
+                      <span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">3%cap 적용</span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main font-medium">165,200 주</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main">512 명</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <div class="rate-bar flex-1"><div class="rate-bar-fill" style="width:40.5%"></div></div>
+                      <span class="text-3.5 font-semibold text-blue-600 w-[42px] text-right">40.5%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hover:bg-agm-blue-bg cursor-pointer transition-colors" onclick="openDetailModal('제4호', '이사 보수한도 승인의 건')">
+                  <td class="px-5 py-3 text-3.75 font-bold text-agm-text-sub">제4호</td>
+                  <td class="px-4 py-3 text-3.5 text-semantic-text-main">이사 보수한도 승인의 건</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main font-medium">176,544 주</td>
+                  <td class="px-4 py-3 text-3.5 text-right text-semantic-text-main">530 명</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <div class="rate-bar flex-1"><div class="rate-bar-fill" style="width:43.3%"></div></div>
+                      <span class="text-3.5 font-semibold text-blue-600 w-[42px] text-right">43.3%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- 전체 참여 내역 -->
+          <section class="bg-white rounded-[10px] border border-semantic-border-default shadow-sm overflow-hidden">
+            <div class="flex items-center justify-between px-5 py-3.5 border-b border-semantic-border-default">
+              <div class="flex items-center gap-2">
+                <i class="ti ti-list text-[15px] text-agm-text-sub"></i>
+                <h2 class="text-3.5 font-semibold text-semantic-text-main">전체 참여 내역</h2>
+                <span class="text-3 text-agm-text-dis">전자투표 · 위임 통합</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <select class="form-input text-3 py-1" style="width:120px">
+                  <option>전체</option>
+                  <option>전자투표</option>
+                  <option>위임장</option>
+                </select>
+                <input class="form-input text-3 py-1" style="width:160px" type="text" placeholder="주주명 검색" />
+              </div>
+            </div>
+            <table class="w-full border-collapse table-fixed" aria-label="전체 참여 내역">
+              <thead>
+                <tr class="bg-semantic-surface-subtle border-b border-semantic-border-default">
+                  <th class="text-left text-3 font-semibold text-agm-text-sub px-5 py-2.5 w-[50px]">구분</th>
+                  <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[180px]">주주명</th>
+                  <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[110px]">보유 주식수</th>
+                  <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제1호</th>
+                  <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제2호</th>
+                  <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제3호</th>
+                  <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5">제4호</th>
+                  <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[110px]">참여일시</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                  <td class="px-5 py-2.5"><span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">투표</span></td>
+                  <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">김** (개인)</td>
+                  <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">12,500</td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-warn">반대</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/15 14:22</td>
+                </tr>
+                <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                  <td class="px-5 py-2.5"><span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">투표</span></td>
+                  <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">이** 자산운용</td>
+                  <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">45,200</td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-warn">반대</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/16 09:47</td>
+                </tr>
+                <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                  <td class="px-5 py-2.5"><span class="text-[10px] font-semibold text-semantic-state-success bg-green-50 border border-agm-green-bd px-1.5 py-0.5 rounded-full">위임</span></td>
+                  <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">박** (개인)</td>
+                  <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">3,000</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/18 11:20</td>
+                </tr>
+                <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                  <td class="px-5 py-2.5"><span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">투표</span></td>
+                  <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">최** 펀드</td>
+                  <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">82,000</td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/22 11:30</td>
+                </tr>
+                <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                  <td class="px-5 py-2.5"><span class="text-[10px] font-semibold text-semantic-state-success bg-green-50 border border-agm-green-bd px-1.5 py-0.5 rounded-full">위임</span></td>
+                  <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">정** (개인)</td>
+                  <td class="px-4 py-2.5 text-3.5 text-right text-semantic-text-main">7,800</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                  <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/25 08:14</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="px-5 py-3 border-t border-semantic-border-default text-center text-3 text-agm-text-dis">
+              535개 더 있습니다
+            </div>
+          </section>
+
         </div>
       </div>
     </main>
 
+    <!-- 주주별 상세 내역 모달 -->
+    <div id="modal-detail" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40" aria-modal="true" role="dialog">
+      <div class="bg-white rounded-xl shadow-2xl w-[740px] max-h-[85vh] flex flex-col">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-semantic-border-default flex-shrink-0">
+          <div>
+            <h2 class="text-4 font-bold text-semantic-text-main" id="modal-title">제1호 — 재무제표 승인의 건</h2>
+            <p class="text-3 text-agm-text-dis mt-0.5">주주별 상세 행사 내역</p>
+          </div>
+          <button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-black/5 text-agm-text-dis transition-colors" onclick="closeDetailModal()">
+            <i class="ti ti-x text-[15px]"></i>
+          </button>
+        </div>
+
+        <!-- 모달 요약 -->
+        <div class="px-6 py-3 bg-semantic-surface-subtle border-b border-semantic-border-default flex-shrink-0 flex items-center gap-6">
+          <div class="text-center">
+            <p class="text-3 text-agm-text-sub">행사가능 의결권</p>
+            <p class="text-3.5 font-bold text-semantic-text-main">176,544 주</p>
+          </div>
+          <div class="w-px h-8 bg-semantic-border-default"></div>
+          <div class="text-center">
+            <p class="text-3 text-agm-text-sub">행사 주주수</p>
+            <p class="text-3.5 font-bold text-blue-600">540 명</p>
+          </div>
+          <div class="w-px h-8 bg-semantic-border-default"></div>
+          <div class="text-center">
+            <p class="text-3 text-agm-text-sub">행사율</p>
+            <p class="text-3.5 font-bold text-blue-600">43.3%</p>
+          </div>
+          <div class="w-px h-8 bg-semantic-border-default"></div>
+          <div class="text-center">
+            <p class="text-3 text-agm-text-sub">찬성</p>
+            <p class="text-3.5 font-bold text-semantic-state-success">156,200 주</p>
+          </div>
+          <div class="w-px h-8 bg-semantic-border-default"></div>
+          <div class="text-center">
+            <p class="text-3 text-agm-text-sub">반대</p>
+            <p class="text-3.5 font-bold text-red-500">20,344 주</p>
+          </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto scrollbar-thin">
+          <table class="w-full border-collapse">
+            <thead class="sticky top-0">
+              <tr class="bg-semantic-surface-subtle border-b border-semantic-border-default">
+                <th class="text-left text-3 font-semibold text-agm-text-sub px-6 py-2.5 w-[50px]">구분</th>
+                <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5">주주명</th>
+                <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[120px]">보유 주식수</th>
+                <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[120px]">행사 의결권</th>
+                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[80px]">의사표시</th>
+                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[110px]">행사일시</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                <td class="px-6 py-2.5"><span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">투표</span></td>
+                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">김** (개인)</td>
+                <td class="px-4 py-2.5 text-3.5 text-right">12,500</td>
+                <td class="px-4 py-2.5 text-3.5 text-right font-medium">12,500</td>
+                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/15 14:22</td>
+              </tr>
+              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                <td class="px-6 py-2.5"><span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">투표</span></td>
+                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">이** 자산운용</td>
+                <td class="px-4 py-2.5 text-3.5 text-right">45,200</td>
+                <td class="px-4 py-2.5 text-3.5 text-right font-medium">45,200</td>
+                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/16 09:47</td>
+              </tr>
+              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                <td class="px-6 py-2.5"><span class="text-[10px] font-semibold text-semantic-state-success bg-green-50 border border-agm-green-bd px-1.5 py-0.5 rounded-full">위임</span></td>
+                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">박** (개인)</td>
+                <td class="px-4 py-2.5 text-3.5 text-right">3,000</td>
+                <td class="px-4 py-2.5 text-3.5 text-right font-medium">3,000</td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/18 11:20</td>
+              </tr>
+              <tr class="border-b border-semantic-border-default hover:bg-semantic-surface-subtle">
+                <td class="px-6 py-2.5"><span class="text-[10px] font-semibold text-blue-600 bg-agm-blue-bg border border-agm-blue-bd px-1.5 py-0.5 rounded-full">투표</span></td>
+                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">최** 펀드</td>
+                <td class="px-4 py-2.5 text-3.5 text-right">82,000</td>
+                <td class="px-4 py-2.5 text-3.5 text-right font-medium">82,000</td>
+                <td class="px-4 py-2.5 text-center"><span class="cb cb-ok">찬성</span></td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/22 11:30</td>
+              </tr>
+              <tr class="hover:bg-semantic-surface-subtle">
+                <td class="px-6 py-2.5"><span class="text-[10px] font-semibold text-semantic-state-success bg-green-50 border border-agm-green-bd px-1.5 py-0.5 rounded-full">위임</span></td>
+                <td class="px-4 py-2.5 text-3.5 font-medium text-semantic-text-main">정** (개인)</td>
+                <td class="px-4 py-2.5 text-3.5 text-right">7,800</td>
+                <td class="px-4 py-2.5 text-3.5 text-right font-medium">7,800</td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">위임</td>
+                <td class="px-4 py-2.5 text-center text-3 text-agm-text-dis">03/25 08:14</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="px-6 py-3 text-center text-3 text-agm-text-dis border-t border-semantic-border-default">535개 더 있습니다</div>
+        </div>
+
+        <div class="px-6 py-3.5 border-t border-semantic-border-default flex justify-end flex-shrink-0">
+          <button class="btn btn-line btn-sm"><i class="ti ti-download"></i>엑셀 다운로드</button>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="./js/main.js"></script>
+    <script>
+      function openDetailModal(num, title) {
+        document.getElementById('modal-title').textContent = num + ' — ' + title;
+        const el = document.getElementById('modal-detail');
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      }
+      function closeDetailModal() {
+        const el = document.getElementById('modal-detail');
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+      document.getElementById('modal-detail').addEventListener('click', function(e) {
+        if (e.target === this) closeDetailModal();
+      });
+    </script>
   </body>
 </html>
