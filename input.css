@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------
+   AGM IR Admin -- 커스텀 레이어
+   @apply 는 @layer 안에서만 사용 (AGENTS.md 규칙).
+--------------------------------------------------------------- */
+
+@layer base {
+  :root {
+    --sb-w: 252px;
+  }
+
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system,
+      BlinkMacSystemFont, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar        { width: 4px; height: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb  {
+    @apply bg-semantic-border-default rounded-full;
+  }
+}
+
+@layer components {
+
+  /* ---- Sidebar collapse button -------------------------------- */
+  .sb-collapse-btn {
+    left: calc(var(--sb-w) - 13px);
+    @apply transition-[left,background-color,color] duration-[220ms];
+  }
+  .sb-collapse-btn[data-collapsed='true'] {
+    left: 6px;
+  }
+
+  /* ---- Sidebar width transition ------------------------------ */
+  .sb-transition {
+    @apply transition-[width] duration-[220ms];
+  }
+
+  /* ---- Nav item ---------------------------------------------- */
+  .nav-item {
+    @apply flex items-center gap-[9px] px-4.5 py-2.25
+           text-3.75 text-agm-text-sub
+           whitespace-nowrap transition-[background-color,color] duration-[120ms];
+  }
+  .nav-item:hover  { @apply bg-black/5 text-semantic-text-main; }
+  .nav-item.active { @apply bg-agm-blue-bg text-blue-600 font-medium; }
+
+  /* ---- Instance group header --------------------------------- */
+  .ig-hd {
+    @apply flex items-center gap-1.5 pl-4 pr-4.5 py-2.25
+           text-3.75 text-agm-text-sub
+           cursor-pointer select-none whitespace-nowrap
+           transition-[background-color,color] duration-[120ms]
+           w-full text-left;
+  }
+  .ig-hd:hover { @apply bg-black/5 text-semantic-text-main; }
+
+  /* ---- Instance group chevron -------------------------------- */
+  .ig-chev {
+    @apply ml-auto text-[11px] text-agm-text-dis
+           transition-transform duration-[180ms];
+  }
+  .ig-hd[aria-expanded='true']  .ig-chev { @apply rotate-0;    }
+  .ig-hd[aria-expanded='false'] .ig-chev { @apply -rotate-90; }
+
+  /* ---- Instance group body ----------------------------------- */
+  .ig-body[data-open='false'] { @apply hidden; }
+
+  /* ---- Instance group link ----------------------------------- */
+  .ig-link {
+    @apply flex items-center justify-between px-4.5 pl-[38px] py-1.75
+           text-3.75 text-agm-text-sub whitespace-nowrap
+           transition-[background-color,color] duration-[120ms];
+  }
+  .ig-link:hover  { @apply bg-black/5 text-semantic-text-main; }
+  .ig-link.active { @apply bg-agm-blue-bg text-blue-600 font-medium; }
+
+  /* ---- Status chip ------------------------------------------ */
+  .chip {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded
+           text-3.25 font-medium;
+  }
+  .chip-prep {
+    @apply bg-agm-yellow-bg text-agm-yellow-tx border border-agm-yellow-bd;
+  }
+  .chip-done {
+    @apply bg-semantic-state-success-subtle text-semantic-state-success
+           border border-agm-green-bd;
+  }
+  .chip-live {
+    @apply bg-agm-blue-bg text-blue-600 border border-agm-blue-bd;
+  }
+
+  /* ---- Completion badge -------------------------------------- */
+  .cb {
+    @apply text-[11px] px-1.5 py-0.5 rounded-sm whitespace-nowrap;
+  }
+  .cb-ok   { @apply bg-semantic-state-success-subtle text-semantic-state-success; }
+  .cb-warn { @apply bg-agm-yellow-bg text-agm-yellow-tx; }
+  .cb-na   { @apply bg-semantic-surface-subtle text-agm-text-dis; }
+
+  /* ---- Button ----------------------------------------------- */
+  .btn {
+    @apply inline-flex items-center gap-[5px] px-3.5 py-[7px]
+           rounded text-3.5 font-medium
+           transition-all duration-[150ms] cursor-pointer;
+    border: none;
+  }
+  .btn-prim          { @apply bg-blue-600 text-white; }
+  .btn-prim:hover    { @apply bg-blue-700; }
+  .btn-line          { @apply bg-white text-agm-text-sub border border-semantic-border-default; }
+  .btn-line:hover    { @apply bg-semantic-surface-subtle text-semantic-text-main; }
+  .btn-sm            { @apply px-2.5 py-[5px] text-3; }
+
+  /* ---- Form input ------------------------------------------- */
+  .form-input {
+    @apply w-full px-2.5 py-2
+           border border-semantic-border-default rounded
+           text-3.5 bg-white text-semantic-text-main;
+    font-family: inherit;
+  }
+  .form-input:focus {
+    @apply outline-none border-blue-600 ring-[3px] ring-agm-blue-bg;
+  }
+
+  /* ---- Action card hover ------------------------------------ */
+  .action-card:hover {
+    @apply border-agm-blue-bd ring-[3px] ring-agm-blue-bg;
+  }
+}
+
+}

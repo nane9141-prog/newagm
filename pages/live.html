@@ -1,0 +1,249 @@
+<!doctype html>
+<!-- Page: 현장진행 — AGM IR Admin -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>현장진행 — AGM IR Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.26.0/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+
+  <body class="flex h-screen overflow-hidden bg-agm-bg text-3.5 text-semantic-text-main">
+
+    <button id="sb-collapse-btn" class="sb-collapse-btn fixed top-[22px] z-[200] w-[26px] h-[26px] bg-white border border-semantic-border-default rounded-full flex items-center justify-center text-semantic-text-tertiary text-[13px] shadow-sm cursor-pointer" aria-label="사이드바 접기" aria-expanded="true" aria-controls="sidebar" data-collapsed="false">
+      <i class="ti ti-chevron-left" id="sb-collapse-icon" aria-hidden="true"></i>
+    </button>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="w-sidebar h-screen flex-shrink-0 bg-agm-bg border-r border-semantic-border-default flex flex-col overflow-hidden sb-transition" aria-label="메인 내비게이션">
+      <div class="flex items-center gap-2 p-4 border-b border-semantic-border-default flex-shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="875 520 170 46" class="h-[24px] flex-shrink-0" aria-label="Nexsr" role="img">
+          <defs><style>.cls-1{fill:#231815}</style></defs>
+          <path class="cls-1" d="M981.29,557.98c-1.5,0-2.9-.2-4.18-.59-1.28-.4-2.44-1-3.49-1.8-1.04-.81-1.97-1.8-2.79-2.99l2.93-3.37c1.29,1.85,2.54,3.13,3.72,3.84,1.19.71,2.6,1.07,4.24,1.07,1,0,1.91-.16,2.73-.48.82-.32,1.47-.75,1.94-1.31s.71-1.19.71-1.9c0-.48-.08-.92-.24-1.35-.16-.42-.4-.81-.73-1.15-.33-.34-.75-.66-1.27-.95-.51-.29-1.12-.55-1.8-.77-.69-.22-1.48-.42-2.38-.57-1.43-.29-2.67-.67-3.72-1.15-1.06-.48-1.94-1.07-2.65-1.78s-1.24-1.52-1.58-2.44c-.34-.91-.51-1.93-.51-3.07s.24-2.14.73-3.09c.49-.95,1.16-1.78,2.02-2.48.86-.7,1.87-1.24,3.03-1.62,1.16-.38,2.42-.57,3.76-.57,1.43,0,2.73.19,3.92.55,1.19.37,2.24.92,3.17,1.64.92.73,1.69,1.62,2.3,2.67l-3.01,2.97c-.53-.87-1.12-1.6-1.78-2.2-.66-.59-1.39-1.04-2.18-1.35-.79-.3-1.64-.46-2.54-.46-1.03,0-1.93.16-2.69.48-.77.32-1.37.76-1.8,1.33-.44.57-.65,1.24-.65,2,0,.55.11,1.06.32,1.52.21.46.53.87.97,1.23.44.36,1.02.67,1.76.95.74.28,1.62.52,2.65.73,1.45.32,2.75.72,3.88,1.21s2.1,1.06,2.89,1.72c.79.66,1.39,1.4,1.8,2.22.41.82.61,1.7.61,2.65,0,1.77-.41,3.3-1.23,4.59-.82,1.29-1.98,2.29-3.49,2.99-1.51.7-3.3,1.05-5.39,1.05Z"/>
+          <path class="cls-1" d="M997.45,557.58v-27.73h11.8c1.58,0,3.04.39,4.38,1.17,1.33.78,2.4,1.84,3.19,3.17.79,1.33,1.19,2.83,1.19,4.5,0,1.5-.4,2.91-1.19,4.2-.79,1.29-1.85,2.33-3.17,3.11-1.32.78-2.79,1.17-4.4,1.17h-7.53v10.42h-4.28ZM1001.73,543.05h7.92c.77,0,1.45-.19,2.06-.57s1.08-.91,1.43-1.58c.34-.67.52-1.42.52-2.24,0-.92-.22-1.74-.65-2.44-.44-.7-1.04-1.25-1.82-1.64-.78-.4-1.66-.59-2.63-.59h-6.81v9.07ZM1013.93,557.58l-7.05-12.52,4.4-.99,7.84,13.55-5.19-.04Z"/>
+          <path class="cls-1" d="M883,557.58v-27.73h7.01l13.47,18.46-1.62-.4c-.13-.98-.24-1.86-.34-2.65-.09-.79-.17-1.54-.24-2.26-.07-.71-.12-1.43-.16-2.14-.04-.71-.06-1.49-.06-2.34v-8.67h7.57v27.73h-7.09l-14.5-19.81,2.73.67c.13,1.08.24,2.02.34,2.81.09.79.17,1.5.22,2.14s.1,1.24.14,1.82c.04.58.07,1.2.08,1.86.01.66.02,1.41.02,2.26v8.24h-7.57Z"/>
+          <path class="cls-1" d="M915.2,557.58v-27.73h20.16v6.46h-12.64v14.81h13.23v6.46h-20.76ZM918.92,546.57v-6.1h14.85v6.1h-14.85Z"/>
+          <g><g><polygon class="cls-1" points="959.36 557.58 949.07 543.73 954.76 540.2 967.85 557.58 959.36 557.58"/><polygon class="cls-1" points="967.85 529.86 954.76 547.24 949.07 543.71 959.36 529.86 967.85 529.86"/></g><g><polygon class="cls-1" points="947.15 557.58 957.43 543.73 951.75 540.2 938.65 557.58 947.15 557.58"/><polygon class="cls-1" points="938.65 529.86 951.75 547.24 957.43 543.71 947.15 529.86 938.65 529.86"/></g></g>
+        </svg>
+      </div>
+      <nav class="flex-1 overflow-y-auto overflow-x-hidden py-1.5 scrollbar-thin" aria-label="사이드바 메뉴">
+        <a class="nav-item" href="./dashboard.html"><i class="ti ti-layout-dashboard text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>대시보드</a>
+        <a class="nav-item" href="#"><i class="ti ti-users text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>주주명부 관리</a>
+        <a class="nav-item" href="#"><i class="ti ti-file-description text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>정관 관리</a>
+        <div class="h-px bg-semantic-border-default my-2.5" role="separator" aria-hidden="true"></div>
+        <div class="px-4.5 pt-[18px] pb-[5px] text-2.5 font-bold text-agm-text-dis uppercase tracking-[.06em] whitespace-nowrap" aria-hidden="true">주주총회</div>
+        <div class="ig" id="ig-67">
+          <button class="ig-hd" data-ig-toggle aria-expanded="true" aria-controls="ig-67-body">
+            <span class="w-[7px] h-[7px] rounded-full bg-agm-yellow flex-shrink-0" aria-label="준비중"></span>
+            <i class="ti ti-calendar-event text-[12px] text-agm-text-dis mr-px" aria-hidden="true"></i>
+            제67기 정기주총<i class="ti ti-chevron-down ig-chev" aria-hidden="true"></i>
+          </button>
+          <div id="ig-67-body" class="ig-body" data-open="true">
+            <a class="ig-link" href="./settings.html">기본설정<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
+            <a class="ig-link" href="./agenda.html">의안설정<span class="flex items-center gap-0.5 text-[10px] text-agm-yellow-tx font-semibold"><i class="ti ti-alert-triangle text-[10px]" aria-hidden="true"></i>2</span></a>
+            <a class="ig-link" href="./prevote.html">사전투표/위임<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str"></span></span></a>
+            <a class="ig-link active" href="./live.html" aria-current="page">현장진행<span class="chip chip-live ml-auto">LIVE</span></a>
+            <a class="ig-link" href="./result.html">결과보고<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str"></span></span></a>
+          </div>
+        </div>
+        <div class="ig" id="ig-66">
+          <button class="ig-hd" data-ig-toggle aria-expanded="false" aria-controls="ig-66-body">
+            <span class="w-[7px] h-[7px] rounded-full bg-agm-text-dis flex-shrink-0" aria-label="완료"></span>
+            <i class="ti ti-calendar-event text-[12px] text-agm-text-dis mr-px" aria-hidden="true"></i>
+            제66기 정기주총<i class="ti ti-chevron-down ig-chev" aria-hidden="true"></i>
+          </button>
+          <div id="ig-66-body" class="ig-body" data-open="false">
+            <a class="ig-link" href="./settings.html">기본설정<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
+            <a class="ig-link" href="./agenda.html">의안설정<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
+            <a class="ig-link" href="./prevote.html">사전투표/위임<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
+            <a class="ig-link" href="./live.html">현장진행<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
+            <a class="ig-link" href="./result.html">결과보고<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-state-success"></span></span></a>
+          </div>
+        </div>
+        <div class="h-px bg-semantic-border-default my-2.5" role="separator" aria-hidden="true"></div>
+        <a class="nav-item" href="#"><i class="ti ti-template text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>템플릿</a>
+        <a class="nav-item" href="#"><i class="ti ti-clipboard-list text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>감사보고 관리</a>
+      </nav>
+      <footer class="border-t border-semantic-border-default pt-1.5 pb-1.5 flex-shrink-0">
+        <div class="flex items-center gap-[9px] px-4.5 py-2.5 cursor-pointer hover:bg-black/5 transition-colors duration-[120ms]">
+          <div class="w-[27px] h-[27px] rounded-full bg-blue-600 text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0">KP</div>
+          <div><div class="text-3.75 font-medium text-semantic-text-main">관리자</div><div class="text-3 text-agm-text-dis">Admin</div></div>
+        </div>
+      </footer>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="main-content" class="flex-1 min-w-0 flex flex-col overflow-hidden bg-white">
+      <div id="page-wrap" class="flex-1 overflow-y-auto px-11 py-9 scrollbar-thin">
+        <!-- 페이지 헤더 -->
+        <header class="flex items-center justify-between mb-6">
+          <div class="flex items-baseline gap-2.5 flex-wrap">
+            <span class="text-[22px] font-medium text-semantic-text-main tracking-tight">제67기 정기주총</span>
+            <span class="text-[22px] font-normal text-agm-text-dis" aria-hidden="true">/</span>
+            <h1 class="text-[22px] font-bold text-semantic-text-main tracking-tight">현장진행</h1>
+            <span class="chip chip-live ml-3"><span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" aria-hidden="true"></span>LIVE</span>
+          </div>
+          <div class="flex gap-2 items-center" role="group" aria-label="페이지 액션">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-semantic-surface-subtle border border-semantic-border-default">
+              <i class="ti ti-clock text-[13px] text-agm-text-dis" aria-hidden="true"></i>
+              <span class="text-3.5 font-medium text-semantic-text-main" id="live-clock" aria-live="polite">10:24:37</span>
+            </div>
+            <button class="btn btn-prim" id="btn-end-agm">
+              <i class="ti ti-player-stop" aria-hidden="true"></i>주총 종료
+            </button>
+          </div>
+        </header>
+
+        <!-- 출석 현황 배너 -->
+        <div class="mb-6 flex items-center gap-5 px-5 py-3 rounded-lg bg-white border border-semantic-border-default shadow-sm">
+        <div class="flex items-center gap-2">
+          <i class="ti ti-users text-blue-600 text-[18px]" aria-hidden="true"></i>
+          <div>
+            <p class="text-3 text-agm-text-sub">현장 출석</p>
+            <p class="text-4 font-bold text-semantic-text-main">234명</p>
+          </div>
+        </div>
+        <div class="w-px h-8 bg-semantic-border-default" aria-hidden="true"></div>
+        <div>
+          <p class="text-3 text-agm-text-sub">사전투표</p>
+          <p class="text-4 font-bold text-blue-600">384명</p>
+        </div>
+        <div class="w-px h-8 bg-semantic-border-default" aria-hidden="true"></div>
+        <div>
+          <p class="text-3 text-agm-text-sub">위임</p>
+          <p class="text-4 font-bold text-semantic-state-success">156명</p>
+        </div>
+        <div class="w-px h-8 bg-semantic-border-default" aria-hidden="true"></div>
+        <div>
+          <p class="text-3 text-agm-text-sub">의결권 행사율</p>
+          <p class="text-4 font-bold text-semantic-text-main">
+            68.4%
+            <span class="text-3 font-normal text-agm-text-dis">/ 총 408,000주</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 탭 -->
+      <div class="flex-shrink-0">
+        <div role="tablist" class="flex border-b border-semantic-border-default">
+          <button role="tab" aria-selected="true" aria-controls="tab-panel-admin"
+            class="py-2 mr-[22px] text-4 text-semantic-text-main font-semibold border-b-2 border-semantic-text-main -mb-px transition-colors whitespace-nowrap cursor-pointer">
+            관리자 뷰
+          </button>
+          <button role="tab" aria-selected="false" aria-controls="tab-panel-chair"
+            class="py-2 mr-[22px] text-4 text-semantic-text-tertiary border-b-2 border-transparent -mb-px transition-colors whitespace-nowrap cursor-pointer hover:text-agm-text-sub">
+            의장 뷰
+          </button>
+        </div>
+      </div>
+
+        <!-- 탭 패널 -->
+        <div class="py-4">
+        <!-- 관리자 뷰 -->
+        <section id="tab-panel-admin" role="tabpanel">
+          <table class="w-full border-collapse table-fixed bg-white rounded-lg shadow-sm border border-semantic-border-default overflow-hidden" aria-label="안건별 투표 현황">
+            <thead>
+              <tr class="bg-semantic-surface-subtle border-b border-semantic-border-default">
+                <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[60px]">번호</th>
+                <th class="text-left text-3 font-semibold text-agm-text-sub px-4 py-2.5">안건명</th>
+                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[90px]">상태</th>
+                <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[100px]">찬성</th>
+                <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[100px]">반대</th>
+                <th class="text-right text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[100px]">기권</th>
+                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[120px]">결과</th>
+                <th class="text-center text-3 font-semibold text-agm-text-sub px-4 py-2.5 w-[140px]">액션</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 제1호 (투표 완료) -->
+              <tr class="border-b border-semantic-border-default">
+                <td class="px-4 py-3 text-3 font-bold text-agm-text-dis">제1호</td>
+                <td class="px-4 py-3">
+                  <p class="text-3.5 font-medium text-semantic-text-main">재무제표 승인의 건</p>
+                  <p class="text-3 text-agm-text-dis mt-0.5">보통결의</p>
+                </td>
+                <td class="px-4 py-3 text-center"><span class="chip chip-done"><i class="ti ti-check text-[10px]" aria-hidden="true"></i>가결</span></td>
+                <td class="px-4 py-3 text-right text-3.5 font-semibold text-semantic-state-success">262,480</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-sub">15,840</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">5,120</td>
+                <td class="px-4 py-3 text-center"><span class="cb cb-ok">가결</span></td>
+                <td class="px-4 py-3 text-center">
+                  <button class="btn btn-line btn-sm" aria-label="제1호 상세 보기">상세</button>
+                </td>
+              </tr>
+              <!-- 제2호 (투표 중) -->
+              <tr class="border-b border-semantic-border-default bg-agm-blue-bg">
+                <td class="px-4 py-3 text-3 font-bold text-agm-text-dis">제2호</td>
+                <td class="px-4 py-3">
+                  <p class="text-3.5 font-medium text-semantic-text-main">이사 선임의 건</p>
+                  <p class="text-3 text-agm-text-dis mt-0.5">보통결의 · 집중투표</p>
+                </td>
+                <td class="px-4 py-3 text-center"><span class="chip chip-live"><span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" aria-hidden="true"></span>진행중</span></td>
+                <td class="px-4 py-3 text-right text-3.5 font-semibold text-semantic-state-success">—</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-sub">—</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-center"><span class="cb cb-na">진행중</span></td>
+                <td class="px-4 py-3 text-center">
+                  <button class="btn btn-prim btn-sm" aria-label="제2호 투표 마감">투표 마감</button>
+                </td>
+              </tr>
+              <!-- 제3호 (대기) -->
+              <tr class="border-b border-semantic-border-default">
+                <td class="px-4 py-3 text-3 font-bold text-agm-text-dis">제3호</td>
+                <td class="px-4 py-3">
+                  <p class="text-3.5 font-medium text-agm-text-sub">감사 선임의 건</p>
+                  <p class="text-3 text-agm-text-dis mt-0.5">보통결의 · 3%cap</p>
+                </td>
+                <td class="px-4 py-3 text-center"><span class="chip chip-prep">대기</span></td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-center"><span class="cb cb-na">대기</span></td>
+                <td class="px-4 py-3 text-center">
+                  <button class="btn btn-line btn-sm" aria-label="제3호 투표 시작" disabled>투표 시작</button>
+                </td>
+              </tr>
+              <!-- 제4호 (대기) -->
+              <tr>
+                <td class="px-4 py-3 text-3 font-bold text-agm-text-dis">제4호</td>
+                <td class="px-4 py-3">
+                  <p class="text-3.5 font-medium text-agm-text-sub">이사 보수한도 승인의 건</p>
+                  <p class="text-3 text-agm-text-dis mt-0.5">보통결의</p>
+                </td>
+                <td class="px-4 py-3 text-center"><span class="chip chip-prep">대기</span></td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-right text-3.5 text-agm-text-dis">—</td>
+                <td class="px-4 py-3 text-center"><span class="cb cb-na">대기</span></td>
+                <td class="px-4 py-3 text-center">
+                  <button class="btn btn-line btn-sm" disabled aria-label="제4호 투표 시작">투표 시작</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 의장 뷰 -->
+        <section id="tab-panel-chair" role="tabpanel" class="hidden">
+          <div class="bg-white rounded-lg border border-semantic-border-default shadow-sm p-6 text-center">
+            <p class="text-5 font-bold text-semantic-text-main mb-2">제2호 이사 선임의 건</p>
+            <p class="text-3.5 text-agm-text-sub mb-6">현재 투표가 진행 중입니다</p>
+            <div class="flex justify-center gap-3">
+              <button class="btn btn-prim" id="btn-close-vote">
+                <i class="ti ti-lock" aria-hidden="true"></i>투표 종료
+              </button>
+              <button class="btn btn-line">
+                <i class="ti ti-chart-bar" aria-hidden="true"></i>중간 집계
+              </button>
+            </div>
+          </div>
+        </section>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
