@@ -67,7 +67,6 @@
 
         <div class="px-4.5 pt-[18px] pb-[5px] text-2.5 font-bold text-agm-text-dis uppercase tracking-[.06em] whitespace-nowrap" aria-hidden="true">주주총회</div>
 
-        <!-- 제67기 (준비중, 펼침) -->
         <div class="ig" id="ig-67">
           <button class="ig-hd" data-ig-toggle aria-expanded="true" aria-controls="ig-67-body" id="ig-67-hd">
             <span class="w-[7px] h-[7px] rounded-full bg-agm-yellow flex-shrink-0" aria-label="준비중"></span>
@@ -86,22 +85,12 @@
                 <i class="ti ti-alert-triangle text-[10px]" aria-hidden="true"></i>2
               </span>
             </a>
-            <a class="ig-link" href="./prevote.html">
-              사전투표/위임
-              <span class="flex items-center" aria-label="미완료"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str" aria-hidden="true"></span></span>
-            </a>
-            <a class="ig-link" href="./live.html">
-              현장진행
-              <span class="flex items-center" aria-label="미완료"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str" aria-hidden="true"></span></span>
-            </a>
-            <a class="ig-link" href="./result.html">
-              결과보고
-              <span class="flex items-center" aria-label="미완료"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str" aria-hidden="true"></span></span>
-            </a>
+            <a class="ig-link" href="./prevote.html">사전투표/위임<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str" aria-hidden="true"></span></span></a>
+            <a class="ig-link" href="./live.html">현장진행<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str" aria-hidden="true"></span></span></a>
+            <a class="ig-link" href="./result.html">결과보고<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-agm-bd-str" aria-hidden="true"></span></span></a>
           </div>
         </div>
 
-        <!-- 제66기 (완료, 접힘) -->
         <div class="ig" id="ig-66">
           <button class="ig-hd" data-ig-toggle aria-expanded="false" aria-controls="ig-66-body" id="ig-66-hd">
             <span class="w-[7px] h-[7px] rounded-full bg-agm-text-dis flex-shrink-0" aria-label="완료"></span>
@@ -119,17 +108,10 @@
         </div>
 
         <div class="h-px bg-semantic-border-default my-2.5" role="separator" aria-hidden="true"></div>
-        <a class="nav-item" href="#">
-          <i class="ti ti-template text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>
-          템플릿
-        </a>
-        <a class="nav-item" href="#">
-          <i class="ti ti-clipboard-list text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>
-          감사보고 관리
-        </a>
+        <a class="nav-item" href="#"><i class="ti ti-template text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>템플릿</a>
+        <a class="nav-item" href="#"><i class="ti ti-clipboard-list text-[15px] w-4 flex-shrink-0 text-center" aria-hidden="true"></i>감사보고 관리</a>
       </nav>
 
-      <!-- 사이드바 하단 -->
       <footer class="border-t border-semantic-border-default pt-1.5 pb-1.5 flex-shrink-0">
         <div class="flex items-center gap-[9px] px-4.5 py-2.5 cursor-pointer hover:bg-black/5 transition-colors duration-[120ms]">
           <div class="w-[27px] h-[27px] rounded-full bg-blue-600 text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">KP</div>
@@ -160,224 +142,309 @@
           </div>
         </header>
 
-        <!-- 경고 배너 -->
-        <div class="mb-6 flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-agm-yellow-bg border border-agm-yellow-bd" role="alert">
-        <i class="ti ti-alert-triangle text-agm-yellow-tx text-[15px] flex-shrink-0" aria-hidden="true"></i>
-        <p class="text-3.5 text-agm-yellow-tx">
-          <strong>2개 항목</strong>이 미완료 상태입니다. 저장 전 모든 필수 항목을 입력해 주세요.
-        </p>
-      </div>
-
         <!-- 설정 폼 -->
         <div class="pb-9">
-        <div class="max-w-[720px] flex flex-col gap-6">
+          <div class="max-w-[720px] flex flex-col gap-6">
 
-          <!-- 섹션 1: 기본 정보 -->
-          <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-basic">
-            <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
-              <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">1</span>
-              <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-basic">기본 정보</h2>
-            </div>
-            <div class="px-5 py-5 flex flex-col gap-5">
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-company">
-                    회사명 <span class="text-blue-600" aria-label="필수">*</span>
-                  </label>
-                  <input id="field-company" class="form-input" type="text" value="주식회사 넥서" />
-                </div>
-                <div>
-                  <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-term">
-                    기수 <span class="text-blue-600" aria-label="필수">*</span>
-                  </label>
-                  <input id="field-term" class="form-input" type="text" value="제67기" />
-                </div>
+            <!-- 섹션 1: 기본 정보 -->
+            <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-basic">
+              <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
+                <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">1</span>
+                <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-basic">기본 정보</h2>
               </div>
-              <div>
-                <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-agm-type">주총 종류</label>
-                <select id="field-agm-type" class="form-input">
-                  <option selected>정기주주총회</option>
-                  <option>임시주주총회</option>
-                </select>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-date">
-                    개최 일시 <span class="text-blue-600" aria-label="필수">*</span>
-                  </label>
-                  <input id="field-date" class="form-input" type="datetime-local" value="2025-03-28T10:00" />
-                </div>
-                <div>
-                  <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-record-date">
-                    의결권 기준일 <span class="text-blue-600" aria-label="필수">*</span>
-                  </label>
-                  <input id="field-record-date" class="form-input" type="date" value="2024-12-31" />
-                </div>
-              </div>
-              <div>
-                <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-venue">
-                  개최 장소 <span class="text-blue-600" aria-label="필수">*</span>
-                </label>
-                <input id="field-venue" class="form-input" type="text" placeholder="예: 서울 강남구 테헤란로 123, 본사 대강당" />
-                <p class="text-3 text-agm-text-dis mt-1">온라인 개최 시 URL 또는 회의 링크를 입력하세요.</p>
-              </div>
-            </div>
-          </section>
+              <div class="px-5 py-5 flex flex-col gap-5">
 
-          <!-- 섹션 2: 주식 정보 -->
-          <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-shares">
-            <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
-              <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">2</span>
-              <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-shares">주식 정보</h2>
-            </div>
-            <div class="px-5 py-5 flex flex-col gap-5">
-              <div>
-                <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-total-shares">
-                  총 발행주식수 <span class="text-blue-600" aria-label="필수">*</span>
-                </label>
-                <div class="flex items-center gap-2">
-                  <input id="field-total-shares" class="form-input" style="width:180px" type="text" value="420,000" />
-                  <span class="text-3.5 text-agm-text-sub">주</span>
-                  <span class="text-3 font-semibold text-agm-text-sub">= 4.2억 주</span>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-term">
+                      기수 <span class="text-blue-600" aria-label="필수">*</span>
+                    </label>
+                    <input id="field-term" class="form-input" type="text" value="제67기" />
+                  </div>
+                  <div>
+                    <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-agm-type">주총 종류</label>
+                    <select id="field-agm-type" class="form-input">
+                      <option selected>정기주주총회</option>
+                      <option>임시주주총회</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="mt-2 flex items-start gap-2 px-3 py-2 rounded bg-agm-blue-bg border border-agm-blue-bd text-3 text-blue-600">
-                  <i class="ti ti-bulb text-[13px] flex-shrink-0 mt-px" aria-hidden="true"></i>
-                  <span>소수점 의결권 지원: <strong>1주 = 10 소수점 의결권</strong>으로 환산됩니다.</span>
-                </div>
-              </div>
-              <div>
-                <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-treasury">자사주 (의결권 제외)</label>
-                <div class="flex items-center gap-2">
-                  <input id="field-treasury" class="form-input" style="width:180px" type="text" value="12,000" />
-                  <span class="text-3.5 text-agm-text-sub">주</span>
-                </div>
-              </div>
-              <div class="flex items-center justify-between px-4 py-3 rounded bg-semantic-surface-subtle border border-semantic-border-default">
-                <span class="text-3.5 font-semibold text-agm-text-sub">의결권 있는 주식</span>
-                <span class="text-4 font-bold text-semantic-text-main">408,000 주</span>
-              </div>
-            </div>
-          </section>
 
-          <!-- 섹션 3: 의결방식 -->
-          <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-voting">
-            <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
-              <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">3</span>
-              <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-voting">의결방식</h2>
-            </div>
-            <div class="px-5 py-5 flex flex-col gap-4">
-              <div>
-                <p class="text-3 font-semibold text-agm-text-sub mb-2">기본 의결 기준</p>
-                <div class="flex flex-col gap-2">
-                  <label class="flex items-center gap-2 text-3.5 cursor-pointer">
-                    <input type="radio" name="voting-standard" value="majority" checked />
-                    출석주주 과반수 + 발행주식 25% 이상 (보통결의)
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-date">
+                      개최 일시 <span class="text-blue-600" aria-label="필수">*</span>
+                    </label>
+                    <input id="field-date" class="form-input" type="datetime-local" value="2025-03-28T10:00" />
+                  </div>
+                  <div>
+                    <label class="block text-3 font-semibold text-agm-text-sub mb-1.5">의결권 기준일</label>
+                    <div class="form-input flex items-center gap-2 bg-semantic-surface-subtle text-agm-text-sub cursor-default select-none">
+                      <i class="ti ti-info-circle text-[13px] flex-shrink-0" aria-hidden="true"></i>
+                      <span>주주명부 선택 시 자동 등록</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-venue">
+                    개최 장소 <span class="text-blue-600" aria-label="필수">*</span>
                   </label>
-                  <label class="flex items-center gap-2 text-3.5 cursor-pointer">
-                    <input type="radio" name="voting-standard" value="supermajority" />
-                    출석주주 2/3 이상 + 발행주식 1/3 이상 (특별결의)
+                  <input id="field-venue" class="form-input" type="text" placeholder="예: 서울 강남구 테헤란로 123, 본사 대강당" />
+                  <p class="text-3 text-agm-text-dis mt-1">온라인 개최 시 URL 또는 회의 링크를 입력하세요.</p>
+                </div>
+
+                <div>
+                  <p class="block text-3 font-semibold text-agm-text-sub mb-2">
+                    자산 규모 <span class="text-blue-600" aria-label="필수">*</span>
+                  </p>
+                  <div class="flex flex-col gap-2" role="radiogroup" aria-label="자산 규모 선택">
+                    <label class="flex items-center gap-2 text-3.5 cursor-pointer">
+                      <input type="radio" name="asset-size" value="under" class="accent-blue-600" />
+                      1천억 미만
+                    </label>
+                    <label class="flex items-center gap-2 text-3.5 cursor-pointer">
+                      <input type="radio" name="asset-size" value="mid" class="accent-blue-600" checked />
+                      1천억 ~ 2조원
+                    </label>
+                    <label class="flex items-center gap-2 text-3.5 cursor-pointer">
+                      <input type="radio" name="asset-size" value="large" class="accent-blue-600" />
+                      2조원 이상
+                    </label>
+                  </div>
+                  <p class="text-3 text-agm-text-dis mt-1.5">2조원 이상 선택 시 행사 설정 일부 항목이 필수로 지정됩니다.</p>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 섹션 2: 사전의결권 설정 -->
+            <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-prevote">
+              <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
+                <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">2</span>
+                <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-prevote">사전의결권 설정</h2>
+              </div>
+              <div class="px-5 py-0 flex flex-col">
+
+                <!-- 전자투표 toggle -->
+                <div class="flex items-center justify-between py-3.5 border-b border-semantic-border-default">
+                  <div>
+                    <p class="text-3.5 font-semibold text-semantic-text-main">전자투표</p>
+                    <p class="text-3 text-agm-text-dis mt-0.5">주총 전 전자투표 시스템을 통해 사전투표 가능</p>
+                  </div>
+                  <label class="relative w-9 h-5 flex-shrink-0" aria-label="전자투표 토글">
+                    <input type="checkbox" class="sr-only peer" id="toggle-evote" checked onchange="toggleSection('evote-detail', this.checked)" />
+                    <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
+                    <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
                   </label>
                 </div>
-              </div>
-              <div class="flex items-center justify-between py-3 border-t border-semantic-border-default">
-                <div>
-                  <p class="text-3.5 font-semibold text-semantic-text-main">집중투표제 적용</p>
-                  <p class="text-3 text-agm-text-dis mt-0.5">이사 선임 안건에 집중투표제를 적용합니다</p>
-                </div>
-                <label class="relative w-9 h-5 flex-shrink-0" aria-label="집중투표제 토글">
-                  <input type="checkbox" class="sr-only peer" id="toggle-cumulative" />
-                  <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
-                  <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
-                </label>
-              </div>
-              <div class="flex items-center justify-between py-3 border-t border-semantic-border-default">
-                <div>
-                  <p class="text-3.5 font-semibold text-semantic-text-main">섀도우 보팅 활성화</p>
-                  <p class="text-3 text-agm-text-dis mt-0.5">불출석 주주 의결권을 출석 비율대로 자동 반영</p>
-                </div>
-                <label class="relative w-9 h-5 flex-shrink-0" aria-label="섀도우 보팅 토글">
-                  <input type="checkbox" class="sr-only peer" id="toggle-shadow" checked />
-                  <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
-                  <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
-                </label>
-              </div>
-            </div>
-          </section>
 
-          <!-- 섹션 4: 전자투표/위임장 -->
-          <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-evote">
-            <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
-              <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">4</span>
-              <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-evote">전자투표 / 위임장 설정</h2>
-            </div>
-            <div class="px-5 py-5 flex flex-col gap-0">
-              <div class="flex items-center justify-between py-3 border-b border-semantic-border-default">
-                <div>
-                  <p class="text-3.5 font-semibold text-semantic-text-main">전자투표 허용</p>
-                  <p class="text-3 text-agm-text-dis mt-0.5">주총 전 전자투표 시스템을 통해 사전투표 가능</p>
+                <!-- 전자투표 상세 -->
+                <div id="evote-detail" class="border-b border-semantic-border-default bg-semantic-surface-subtle px-5 py-4 -mx-5 flex flex-col gap-4">
+                  <div>
+                    <label class="block text-3 font-semibold text-agm-text-sub mb-1.5" for="field-evote-org">
+                      전자투표 관리기관 <span class="text-blue-600" aria-label="필수">*</span>
+                    </label>
+                    <select id="field-evote-org" class="form-input" style="max-width:260px">
+                      <option value="">선택해주세요</option>
+                      <option>IR큐더스</option>
+                      <option>예탁결제원</option>
+                      <option>삼성증권</option>
+                    </select>
+                  </div>
+                  <div>
+                    <p class="text-3 font-semibold text-agm-text-sub mb-1.5">전자투표 행사기간</p>
+                    <div class="flex items-center gap-2">
+                      <input class="form-input" style="width:160px" type="date" value="2025-03-14" aria-label="시작일" />
+                      <span class="text-3 text-agm-text-dis">~</span>
+                      <input class="form-input" style="width:160px" type="date" value="2025-03-27" aria-label="종료일" />
+                    </div>
+                  </div>
                 </div>
-                <label class="relative w-9 h-5 flex-shrink-0" aria-label="전자투표 허용 토글">
-                  <input type="checkbox" class="sr-only peer" id="toggle-evote" checked />
-                  <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
-                  <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
-                </label>
-              </div>
-              <div class="py-3 flex flex-col gap-3 border-b border-semantic-border-default" id="evote-period">
-                <p class="text-3 font-semibold text-agm-text-sub">전자투표 기간</p>
-                <div class="flex items-center gap-2">
-                  <input class="form-input" style="width:160px" type="date" value="2025-03-14" aria-label="시작일" />
-                  <span class="text-3 text-agm-text-dis">~</span>
-                  <input class="form-input" style="width:160px" type="date" value="2025-03-27" aria-label="종료일" />
-                </div>
-              </div>
-              <div class="flex items-center justify-between py-3">
-                <div>
-                  <p class="text-3.5 font-semibold text-semantic-text-main">전자 위임장 허용</p>
-                  <p class="text-3 text-agm-text-dis mt-0.5">온라인으로 의결권 위임 가능</p>
-                </div>
-                <label class="relative w-9 h-5 flex-shrink-0" aria-label="전자 위임장 허용 토글">
-                  <input type="checkbox" class="sr-only peer" id="toggle-proxy" checked />
-                  <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
-                  <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
-                </label>
-              </div>
-            </div>
-          </section>
 
-          <!-- 섹션 5: 첨부 서류 -->
-          <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-docs">
-            <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
-              <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">5</span>
-              <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-docs">첨부 서류</h2>
-            </div>
-            <div class="px-5 py-5 flex flex-col gap-4">
-              <div>
-                <p class="text-3 font-semibold text-agm-text-sub mb-2">공고문 / 소집통보서</p>
-                <div class="border border-semantic-border-default rounded-lg p-3 flex items-center gap-3 bg-semantic-state-success-subtle">
-                  <i class="ti ti-file-description text-blue-600 text-[16px]" aria-hidden="true"></i>
-                  <span class="flex-1 text-3.5 font-medium text-semantic-text-main">제67기_주총공고문.pdf</span>
-                  <span class="text-3 text-agm-text-dis">245 KB</span>
-                  <button class="text-agm-text-dis hover:text-red-500 transition-colors" aria-label="파일 삭제">
-                    <i class="ti ti-x" aria-hidden="true"></i>
-                  </button>
+                <!-- 전자위임장 toggle -->
+                <div class="flex items-center justify-between py-3.5" id="proxy-row">
+                  <div>
+                    <p class="text-3.5 font-semibold text-semantic-text-main">전자위임장</p>
+                    <p class="text-3 text-agm-text-dis mt-0.5">온라인으로 의결권 위임 가능</p>
+                  </div>
+                  <label class="relative w-9 h-5 flex-shrink-0" aria-label="전자위임장 토글">
+                    <input type="checkbox" class="sr-only peer" id="toggle-proxy" checked onchange="toggleSection('proxy-detail', this.checked)" />
+                    <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
+                    <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
+                  </label>
                 </div>
-              </div>
-              <div>
-                <p class="text-3 font-semibold text-agm-text-sub mb-2">사업보고서</p>
-                <div class="border-2 border-dashed border-agm-bd-str rounded-lg px-4 py-[18px] text-center cursor-pointer hover:border-blue-600 hover:bg-agm-blue-bg transition-colors duration-[120ms]" role="button" tabindex="0" aria-label="사업보고서 업로드">
-                  <i class="ti ti-upload text-[20px] text-agm-text-dis block mb-1" aria-hidden="true"></i>
-                  <p class="text-3.5 text-agm-text-dis"><strong class="text-blue-600">파일 선택</strong> 또는 드래그</p>
-                  <p class="text-3 text-agm-text-dis mt-1">PDF · 최대 50MB</p>
-                </div>
-              </div>
-            </div>
-          </section>
 
-        </div>
-      </div>
+                <!-- 전자위임장 상세 -->
+                <div id="proxy-detail" class="bg-semantic-surface-subtle px-5 py-4 -mx-5 flex flex-col gap-4">
+                  <div>
+                    <p class="text-3 font-semibold text-agm-text-sub mb-1.5">전자위임장 행사기간</p>
+                    <div class="flex items-center gap-2">
+                      <input class="form-input" style="width:160px" type="date" value="2025-03-14" aria-label="시작일" />
+                      <span class="text-3 text-agm-text-dis">~</span>
+                      <input class="form-input" style="width:160px" type="date" value="2025-03-27" aria-label="종료일" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 섹션 3: 주주총회 행사 설정 -->
+            <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-event">
+              <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
+                <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">3</span>
+                <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-event">주주총회 행사 설정</h2>
+              </div>
+              <div class="px-5 py-0 flex flex-col">
+
+                <!-- 전자투표 시행여부 -->
+                <div class="flex items-center justify-between py-3.5 border-b border-semantic-border-default">
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <p class="text-3.5 font-semibold text-semantic-text-main">전자투표 시행</p>
+                      <span id="badge-evote" class="hidden text-[10px] font-bold text-white bg-red-500 px-1.5 py-0.5 rounded">필수</span>
+                      <span class="text-[10px] font-medium text-agm-text-dis evote-optional">선택</span>
+                    </div>
+                    <p class="text-3 text-agm-text-dis mt-0.5">주주총회에서 전자투표를 시행합니다</p>
+                  </div>
+                  <label class="relative w-9 h-5 flex-shrink-0" aria-label="전자투표 시행 토글">
+                    <input type="checkbox" class="sr-only peer" id="toggle-evote-exec" />
+                    <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
+                    <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
+                  </label>
+                </div>
+
+                <!-- 생중계 시행여부 -->
+                <div class="flex items-center justify-between py-3.5 border-b border-semantic-border-default">
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <p class="text-3.5 font-semibold text-semantic-text-main">생중계 시행</p>
+                      <span id="badge-live" class="hidden text-[10px] font-bold text-white bg-red-500 px-1.5 py-0.5 rounded">필수</span>
+                      <span class="text-[10px] font-medium text-agm-text-dis live-optional">선택</span>
+                    </div>
+                    <p class="text-3 text-agm-text-dis mt-0.5">주주총회를 온라인으로 생중계합니다</p>
+                  </div>
+                  <label class="relative w-9 h-5 flex-shrink-0" aria-label="생중계 시행 토글">
+                    <input type="checkbox" class="sr-only peer" id="toggle-broadcast" onchange="toggleSection('broadcast-detail', this.checked)" />
+                    <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
+                    <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
+                  </label>
+                </div>
+
+                <!-- 생중계 상세 -->
+                <div id="broadcast-detail" class="hidden border-b border-semantic-border-default bg-semantic-surface-subtle px-5 py-4 -mx-5 flex flex-col gap-4">
+                  <div>
+                    <p class="text-3 font-semibold text-agm-text-sub mb-1.5">주주 인증 기간</p>
+                    <div class="flex items-center gap-2">
+                      <input class="form-input" style="width:160px" type="date" aria-label="시작일" />
+                      <span class="text-3 text-agm-text-dis">~</span>
+                      <input class="form-input" style="width:160px" type="date" aria-label="종료일" />
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-3 font-semibold text-agm-text-sub mb-1.5">질의하기 게시판 운영 기간</p>
+                    <div class="flex items-center gap-2">
+                      <input class="form-input" style="width:160px" type="date" aria-label="시작일" />
+                      <span class="text-3 text-agm-text-dis">~</span>
+                      <input class="form-input" style="width:160px" type="date" aria-label="종료일" />
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-3 font-semibold text-agm-text-sub mb-2">자막 번역 언어</p>
+                    <div class="flex flex-wrap gap-4">
+                      <label class="flex items-center gap-1.5 text-3.5 cursor-pointer">
+                        <input type="checkbox" class="accent-blue-600" checked /> 한국어
+                      </label>
+                      <label class="flex items-center gap-1.5 text-3.5 cursor-pointer">
+                        <input type="checkbox" class="accent-blue-600" /> 영어
+                      </label>
+                      <label class="flex items-center gap-1.5 text-3.5 cursor-pointer">
+                        <input type="checkbox" class="accent-blue-600" /> 중국어
+                      </label>
+                      <label class="flex items-center gap-1.5 text-3.5 cursor-pointer">
+                        <input type="checkbox" class="accent-blue-600" /> 일본어
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 현장표결앱 사용 여부 -->
+                <div class="flex items-center justify-between py-3.5">
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <p class="text-3.5 font-semibold text-semantic-text-main">현장표결앱 사용</p>
+                      <span id="badge-app" class="hidden text-[10px] font-bold text-white bg-red-500 px-1.5 py-0.5 rounded">필수</span>
+                      <span class="text-[10px] font-medium text-agm-text-dis app-optional">선택</span>
+                    </div>
+                    <p class="text-3 text-agm-text-dis mt-0.5">현장 주주 투표를 앱으로 진행합니다</p>
+                  </div>
+                  <label class="relative w-9 h-5 flex-shrink-0" aria-label="현장표결앱 토글">
+                    <input type="checkbox" class="sr-only peer" id="toggle-app" />
+                    <span class="absolute inset-0 rounded-full bg-agm-bd-str peer-checked:bg-blue-600 transition-colors duration-[180ms] cursor-pointer"></span>
+                    <span class="absolute top-[3px] left-[3px] w-3.5 h-3.5 rounded-full bg-white shadow transition-transform duration-[180ms] peer-checked:translate-x-4"></span>
+                  </label>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 섹션 4: 첨부 서류 -->
+            <section class="bg-white rounded-[10px] shadow-sm border border-semantic-border-default overflow-hidden" aria-labelledby="sec-docs">
+              <div class="flex items-center gap-2 px-5 py-4 border-b border-semantic-border-default">
+                <span class="w-5 h-5 rounded-full bg-agm-blue-bg border border-agm-blue-bd text-blue-600 text-[11px] font-bold flex items-center justify-center flex-shrink-0" aria-hidden="true">4</span>
+                <h2 class="text-4 font-semibold text-semantic-text-main" id="sec-docs">첨부 서류</h2>
+              </div>
+              <div class="px-5 py-5 flex flex-col gap-4">
+                <div>
+                  <p class="text-3 font-semibold text-agm-text-sub mb-2">공고문 / 소집통보서</p>
+                  <div class="border border-semantic-border-default rounded-lg p-3 flex items-center gap-3 bg-semantic-state-success-subtle">
+                    <i class="ti ti-file-description text-blue-600 text-[16px]" aria-hidden="true"></i>
+                    <span class="flex-1 text-3.5 font-medium text-semantic-text-main">제67기_주총공고문.pdf</span>
+                    <span class="text-3 text-agm-text-dis">245 KB</span>
+                    <button class="text-agm-text-dis hover:text-red-500 transition-colors" aria-label="파일 삭제">
+                      <i class="ti ti-x" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-3 font-semibold text-agm-text-sub mb-2">사업보고서</p>
+                  <div class="border-2 border-dashed border-agm-bd-str rounded-lg px-4 py-[18px] text-center cursor-pointer hover:border-blue-600 hover:bg-agm-blue-bg transition-colors duration-[120ms]" role="button" tabindex="0" aria-label="사업보고서 업로드">
+                    <i class="ti ti-upload text-[20px] text-agm-text-dis block mb-1" aria-hidden="true"></i>
+                    <p class="text-3.5 text-agm-text-dis"><strong class="text-blue-600">파일 선택</strong> 또는 드래그</p>
+                    <p class="text-3 text-agm-text-dis mt-1">PDF · 최대 50MB</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
           </div>
+        </div>
+
+      </div>
     </main>
 
     <script type="module" src="./js/main.js"></script>
+    <script>
+      // 조건부 섹션 표시/숨김
+      function toggleSection(id, show) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.classList.toggle('hidden', !show);
+      }
+
+      // 자산 규모 변경 → 행사 설정 필수 뱃지
+      document.querySelectorAll('input[name="asset-size"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          const isLarge = radio.value === 'large' && radio.checked;
+          ['evote', 'live', 'app'].forEach(key => {
+            const badge = document.getElementById('badge-' + key);
+            const optionals = document.querySelectorAll('.' + key + '-optional');
+            if (badge) badge.classList.toggle('hidden', !isLarge);
+            optionals.forEach(el => el.classList.toggle('hidden', isLarge));
+          });
+        });
+      });
+    </script>
   </body>
 </html>
